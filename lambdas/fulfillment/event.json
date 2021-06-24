@@ -1,0 +1,103 @@
+{
+    "messageVersion": "1.0",
+    "invocationSource": "FulfillmentCodeHook",
+    "userId": "qdk3j4emhm9f04aewemhxld7wd7ppmmv",
+    "sessionAttributes": {},
+    "requestAttributes": null,
+    "bot": {
+        "name": "CT_GET_LAWYER_ES",
+        "alias": "$LATEST",
+        "version": "$LATEST"
+    },
+    "outputDialogMode": "Text",
+    "currentIntent": {
+        "name": "CarCrash_es",
+        "slots": {
+            "CarModel": "ferrari",
+            "Date": "2021-06-13",
+            "Location": "floridad"
+        },
+        "slotDetails": {
+            "CarModel": {
+                "resolutions": [
+                    {
+                        "value": "Ferrari"
+                    }
+                ],
+                "originalValue": "ferrari"
+            },
+            "Date": {
+                "resolutions": [
+                    {
+                        "value": "2021-06-13"
+                    }
+                ],
+                "originalValue": "domingo pasado"
+            },
+            "Location": {
+                "resolutions": [],
+                "originalValue": "floridad"
+            }
+        },
+        "confirmationStatus": "Confirmed",
+        "nluIntentConfidenceScore": 1.0
+    },
+    "alternativeIntents": [
+        {
+            "name": "AMAZON.FallbackIntent",
+            "slots": {},
+            "slotDetails": {},
+            "confirmationStatus": "null",
+            "nluIntentConfidenceScore": null
+        },
+        {
+            "name": "HitByCar_es",
+            "slots": {
+                "CarModel": null,
+                "Date": null,
+                "Location": null
+            },
+            "slotDetails": {
+                "CarModel": null,
+                "Date": null,
+                "Location": null
+            },
+            "confirmationStatus": "null",
+            "nluIntentConfidenceScore": 0.35
+        },
+        {
+            "name": "saludo_abogados",
+            "slots": {},
+            "slotDetails": {},
+            "confirmationStatus": "null",
+            "nluIntentConfidenceScore": 0.27
+        }
+    ],
+    "inputTranscript": "si",
+    "recentIntentSummaryView": [
+        {
+            "intentName": "CarCrash_es",
+            "checkpointLabel": null,
+            "slots": {
+                "CarModel": "ferrari",
+                "Date": "2021-06-13",
+                "Location": "floridad"
+            },
+            "confirmationStatus": "null",
+            "dialogActionType": "ConfirmIntent",
+            "fulfillmentState": null,
+            "slotToElicit": null
+        },
+        {
+            "intentName": "saludo_abogados",
+            "checkpointLabel": null,
+            "slots": {},
+            "confirmationStatus": "null",
+            "dialogActionType": "Close",
+            "fulfillmentState": "Fulfilled",
+            "slotToElicit": null
+        }
+    ],
+    "sentimentResponse": null,
+    "kendraResponse": null
+}

@@ -1,0 +1,310 @@
+{
+    "metadata": {
+        "schemaVersion": "1.0",
+        "importType": "LEX",
+        "importFormat": "JSON"
+    },
+    "resource": {
+        "name": "get-lawyer-en",
+        "version": "4",
+        "intents": [
+            {
+                "description": "Car Crash Intent",
+                "rejectionStatement": {
+                    "messages": [
+                        {
+                            "contentType": "PlainText",
+                            "content": "Ok if you change your mind do not hesitate to contact us."
+                        }
+                    ]
+                },
+                "name": "CarCrash_en",
+                "version": "$LATEST",
+                "fulfillmentActivity": {
+                    "codeHook": {
+                        "uri": "",
+                        "messageVersion": "1.0"
+                    },
+                    "type": "CodeHook"
+                },
+                "sampleUtterances": [
+                    "A {CarModel} crashed me",
+                    "I had a car crash at {Location}",
+                    "A {CarModel} crashed me on {Location}",
+                    "I crashed at {Location}" 
+                ],
+                "slots": [
+                    {
+                        "sampleUtterances": [
+                        ],
+                        "slotType": "carModel_en",
+                        "slotTypeVersion": "$LATEST",
+                        "obfuscationSetting": "NONE",
+                        "slotConstraint": "Required",
+                        "valueElicitationPrompt": {
+                            "messages": [
+                                {
+                                    "contentType": "PlainText",
+                                    "content": "What car model crashed you?"
+                                }
+                            ],
+                            "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\",\"genericAttachments\":[]}",
+                            "maxAttempts": 3
+                        },
+                        "priority": 3,
+                        "name": "CarModel",
+                        "description": "Other Car Model"
+                    },
+                    {
+                        "sampleUtterances": [],
+                        "slotType": "AMAZON.US_CITY",
+                        "obfuscationSetting": "NONE",
+                        "slotConstraint": "Required",
+                        "valueElicitationPrompt": {
+                            "messages": [
+                                {
+                                    "contentType": "PlainText",
+                                    "content": "Where did it happen?"
+                                }
+                            ],
+                            "maxAttempts": 5
+                        },
+                        "priority": 1,
+                        "name": "Location",
+                        "description": "Place"
+                    },
+                    {
+                        "sampleUtterances": [],
+                        "slotType": "AMAZON.DATE",
+                        "obfuscationSetting": "NONE",
+                        "slotConstraint": "Required",
+                        "valueElicitationPrompt": {
+                            "messages": [
+                                {
+                                    "contentType": "PlainText",
+                                    "content": "when did you crash?"
+                                }
+                            ],
+                            "maxAttempts": 5
+                        },
+                        "priority": 2,
+                        "name": "Date",
+                        "description": "Accident Date"
+                    }
+                ],
+                "confirmationPrompt": {
+                    "messages": [
+                        {
+                            "contentType": "PlainText",
+                            "content": "There is a lawyer available to take your case of Accident occurred {Date} at {Location}, do you want us to contact you?"
+                        }
+                    ],
+                    "maxAttempts": 2
+                }
+            },
+
+            {
+                "description": "Car Hit Intent",
+                "rejectionStatement": {
+                    "messages": [
+                        {
+                            "contentType": "PlainText",
+                            "content": "Ok if you change your mind do not hesitate to contact us."
+                        }
+                    ]
+                },
+                "name": "HitByCar_en",
+                "version": "4",
+                "fulfillmentActivity": {
+                    "codeHook": {
+                        "uri": "",
+                        "messageVersion": "1.0"
+                    },
+                    "type": "CodeHook"
+                },
+                "sampleUtterances": [
+                    "I was hit by a {CarModel}",
+                    "I have been run over",
+                    "I was hit by someone driving a {CarModel}",
+                    "A {CarModel} ran me over",
+                    "I got hit by a {CarModel} at {Location}",
+                    "I got run over at {Location}" 
+                ],
+                "slots": [
+                    {
+                        "sampleUtterances": [
+                        ],
+                        "slotType": "carModel_en",
+                        "slotTypeVersion": "$LATEST",
+                        "obfuscationSetting": "NONE",
+                        "slotConstraint": "Required",
+                        "valueElicitationPrompt": {
+                            "messages": [
+                                {
+                                    "contentType": "PlainText",
+                                    "content": "If you remember, could you tell us which model of car hit you?"
+                                }
+                            ],
+                            "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\",\"genericAttachments\":[]}",
+                            "maxAttempts": 3
+                        },
+                        "priority": 3,
+                        "name": "CarModel",
+                        "description": "Other Car Model"
+                    },
+                    {
+                        "sampleUtterances": [],
+                        "slotType": "AMAZON.US_CITY",
+                        "obfuscationSetting": "NONE",
+                        "slotConstraint": "Required",
+                        "valueElicitationPrompt": {
+                            "messages": [
+                                {
+                                    "contentType": "PlainText",
+                                    "content": "In which city did you suffer the accident?"
+                                }
+                            ],
+                            "maxAttempts": 5
+                        },
+                        "priority": 1,
+                        "name": "Location",
+                        "description": "Place"
+                    },
+                    {
+                        "sampleUtterances": [],
+                        "slotType": "AMAZON.DATE",
+                        "obfuscationSetting": "NONE",
+                        "slotConstraint": "Required",
+                        "valueElicitationPrompt": {
+                            "messages": [
+                                {
+                                    "contentType": "PlainText",
+                                    "content": "When was the accident?"
+                                }
+                            ],
+                            "maxAttempts": 5
+                        },
+                        "priority": 2,
+                        "name": "Date",
+                        "description": "Acccident Date"
+                    }
+                ],
+                "confirmationPrompt": {
+                    "messages": [
+                        {
+                            "contentType": "PlainText",
+                            "content": "There is a lawyer available to take your case of Accident occurred {Date} at {Location}, do you want us to contact you?"
+                        }
+                    ],
+                    "maxAttempts": 2
+                }
+            },
+
+            {
+                "name": "saludo_abogados_en",
+                "version": "1",
+                "fulfillmentActivity": {
+                    "type": "ReturnIntent"
+                },
+                "sampleUtterances": [
+                    "Hello",
+                    "good morning",
+                    "I need a lawyer",
+                    "I do not know what to do",
+                    "help"
+                ],
+                "slots": [],
+                "conclusionStatement": {
+                    "messages": [
+                        {
+                            "groupNumber": 1,
+                            "contentType": "PlainText",
+                            "content": "Hello. I'll help you find a lawyer. Try saying 'I've been run over' or 'I've had a crash'."
+                        }
+                    ]
+                }
+            },
+
+            {
+                "name": "callme_abogados_en",
+                "version": "1",
+                "fulfillmentActivity": {
+                    "codeHook": {
+                        "uri": "",
+                        "messageVersion": "1.0"
+                    },
+                    "type": "CodeHook"
+                },
+                "sampleUtterances": [
+                    "I need to be called",
+                    "call me",
+                    "have a lawyer call me",
+                    "Someone call me",
+                    "urgency"
+                ],
+                "slots": [],
+                "conclusionStatement": {
+                    "messages": [
+                        {
+                            "groupNumber": 1,
+                            "contentType": "PlainText",
+                            "content": "Ok, we will contact you with an emergency lawyer, do not hang up."
+                        }
+                    ]
+                }
+            }
+        ],
+        "slotTypes": [
+            {
+                "description": "Car Model",
+                "name": "carModel_en",
+                "version": "1",
+                "enumerationValues": [
+                    {"value": "audi"},
+                    {"value": "mercedes-benz"},
+                    {"value": "tesla"},
+                    {"value": "porsche"},
+                    {"value": "volvo"},
+                    {"value": "Lamborghini"},
+                    {"value": "Ferrari"},
+                    {"value": "Land Rover"},
+                    {"value": "Jaguar"},
+                    {"value": "Cadillac"},
+                    {"value": "Rolls-Royce"},
+                    {"value": "Maserati"},
+                    {"value": "Bugatti"},
+                    {"value": "chevrolet"},
+                    {"value": "lexus"},
+                    {"value": "ford"},
+                    {"value": "BMW"},
+                    {"value": "I don't know"},
+                    {"value": "I don't remember"}
+                ],
+                "valueSelectionStrategy": "ORIGINAL_VALUE"
+            }
+        ],
+        "voiceId": "0",
+        "childDirected": false,
+        "locale": "en-US",
+        "idleSessionTTLInSeconds": 600,
+        "clarificationPrompt": {
+            "messages": [
+                {
+                    "contentType": "PlainText",
+                    "content": "I didn't understand, what would you like me to do?"
+                }
+            ],
+            "maxAttempts": 2
+        },
+        "abortStatement": {
+            "messages": [
+                {
+                    "contentType": "PlainText",
+                    "content": "Excuse me, I can't help you right now."
+                }
+            ]
+        },
+        "detectSentiment": false,
+        "enableModelImprovements": true
+    }
+}

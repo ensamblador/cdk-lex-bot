@@ -1,0 +1,100 @@
+{
+    "messageVersion": "1.0",
+    "invocationSource": "FulfillmentCodeHook",
+    "userId": "7980f8a2-e90b-400b-b2e8-f003bd48627f",
+    "sessionAttributes": {
+        "CustomerNumber": "+56974769647"
+    },
+    "requestAttributes": null,
+    "bot": {
+        "name": "CT_GET_LAWYER_ES",
+        "alias": "$LATEST",
+        "version": "$LATEST"
+    },
+    "outputDialogMode": "Text",
+    "currentIntent": {
+        "name": "HitByCar_es",
+        "slots": {
+            "CarModel": "ferrari",
+            "Date": "2021-06-11",
+            "Location": "california"
+        },
+        "slotDetails": {
+            "CarModel": {
+                "resolutions": [
+                    {
+                        "value": "Ferrari"
+                    }
+                ],
+                "originalValue": "ferrari"
+            },
+            "Date": {
+                "resolutions": [
+                    {
+                        "value": "2021-06-11"
+                    }
+                ],
+                "originalValue": "viernes pasado"
+            },
+            "Location": {
+                "resolutions": [
+                    {
+                        "value": "california"
+                    }
+                ],
+                "originalValue": "california"
+            }
+        },
+        "confirmationStatus": "Confirmed",
+        "nluIntentConfidenceScore": 1.0
+    },
+    "alternativeIntents": [
+        {
+            "name": "AMAZON.FallbackIntent",
+            "slots": {},
+            "slotDetails": {},
+            "confirmationStatus": "null",
+            "nluIntentConfidenceScore": null
+        },
+        {
+            "name": "saludo_abogados",
+            "slots": {},
+            "slotDetails": {},
+            "confirmationStatus": "null",
+            "nluIntentConfidenceScore": 0.32
+        },
+        {
+            "name": "CarCrash_es",
+            "slots": {
+                "CarModel": null,
+                "Date": null,
+                "Location": null
+            },
+            "slotDetails": {
+                "CarModel": null,
+                "Date": null,
+                "Location": null
+            },
+            "confirmationStatus": "null",
+            "nluIntentConfidenceScore": 0.23
+        }
+    ],
+    "inputTranscript": "sí",
+    "recentIntentSummaryView": [
+        {
+            "intentName": "HitByCar_es",
+            "checkpointLabel": null,
+            "slots": {
+                "CarModel": "ferrari",
+                "Date": "2021-06-11",
+                "Location": "california"
+            },
+            "confirmationStatus": "null",
+            "dialogActionType": "ConfirmIntent",
+            "fulfillmentState": null,
+            "slotToElicit": null
+        }
+    ],
+    "sentimentResponse": null,
+    "kendraResponse": null
+}

@@ -1,0 +1,98 @@
+{
+    "messageVersion": "1.0",
+    "invocationSource": "FulfillmentCodeHook",
+    "userId": "baff4f39-9f2c-4e8e-abc3-0a9bf9e8f35a",
+    "sessionAttributes": {},
+    "requestAttributes": null,
+    "bot": {
+        "name": "CT_GET_LAWYER_ES",
+        "alias": "$LATEST",
+        "version": "$LATEST"
+    },
+    "outputDialogMode": "Text",
+    "currentIntent": {
+        "name": "CarCrash_es",
+        "slots": {
+            "CarModel": "mercedes",
+            "Date": "2021-06-13",
+            "Location": "santiago"
+        },
+        "slotDetails": {
+            "CarModel": {
+                "resolutions": [
+                    {
+                        "value": "mercedes-benz"
+                    }
+                ],
+                "originalValue": "mercedes"
+            },
+            "Date": {
+                "resolutions": [
+                    {
+                        "value": "2021-06-13"
+                    }
+                ],
+                "originalValue": "domingo pasado"
+            },
+            "Location": {
+                "resolutions": [
+                    {
+                        "value": "santiago"
+                    }
+                ],
+                "originalValue": "santiago"
+            }
+        },
+        "confirmationStatus": "Confirmed",
+        "nluIntentConfidenceScore": 1.0
+    },
+    "alternativeIntents": [
+        {
+            "name": "AMAZON.FallbackIntent",
+            "slots": {},
+            "slotDetails": {},
+            "confirmationStatus": "null",
+            "nluIntentConfidenceScore": null
+        },
+        {
+            "name": "HitByCar_es",
+            "slots": {
+                "CarModel": null,
+                "Date": null,
+                "Location": null
+            },
+            "slotDetails": {
+                "CarModel": null,
+                "Date": null,
+                "Location": null
+            },
+            "confirmationStatus": "null",
+            "nluIntentConfidenceScore": 0.35
+        },
+        {
+            "name": "saludo_abogados",
+            "slots": {},
+            "slotDetails": {},
+            "confirmationStatus": "null",
+            "nluIntentConfidenceScore": 0.27
+        }
+    ],
+    "inputTranscript": "sí",
+    "recentIntentSummaryView": [
+        {
+            "intentName": "CarCrash_es",
+            "checkpointLabel": null,
+            "slots": {
+                "CarModel": "mercedes",
+                "Date": "2021-06-13",
+                "Location": "santiago"
+            },
+            "confirmationStatus": "null",
+            "dialogActionType": "ConfirmIntent",
+            "fulfillmentState": null,
+            "slotToElicit": null
+        }
+    ],
+    "sentimentResponse": null,
+    "kendraResponse": null
+}

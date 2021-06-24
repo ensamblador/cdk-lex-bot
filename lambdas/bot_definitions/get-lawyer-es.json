@@ -1,0 +1,313 @@
+{
+    "metadata": {
+        "schemaVersion": "1.0",
+        "importType": "LEX",
+        "importFormat": "JSON"
+    },
+    "resource": {
+        "name": "get-lawyer-es",
+        "version": "4",
+        "intents": [
+            {
+                "description": "Intención Abogado de Choques de autos",
+                "rejectionStatement": {
+                    "messages": [
+                        {
+                            "contentType": "PlainText",
+                            "content": "Vale si cambia de opinión no dude en contactarnos."
+                        }
+                    ]
+                },
+                "name": "CarCrash_es",
+                "version": "4",
+                "fulfillmentActivity": {
+                    "codeHook": {
+                        "uri": "",
+                        "messageVersion": "1.0"
+                    },
+                    "type": "CodeHook"
+                },
+                "sampleUtterances": [
+                    "Me han chocado un {CarModel}",
+                    "He sufrido un choque",
+                    "Un {CarModel} me chocó",
+                    "Me han chocado un {CarModel} en {Location}",
+                    "Un {CarModel} me chocó en {Location}",
+                    "He chocado en {Location}"
+                ],
+                "slots": [
+                    {
+                        "sampleUtterances": [
+                        ],
+                        "slotType": "carModel_es",
+                        "slotTypeVersion": "$LATEST",
+                        "obfuscationSetting": "NONE",
+                        "slotConstraint": "Required",
+                        "valueElicitationPrompt": {
+                            "messages": [
+                                {
+                                    "contentType": "PlainText",
+                                    "content": "¿Si lo recuerda, nos podría comentar qué modelo de auto lo chocó?"
+                                }
+                            ],
+                            "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\",\"genericAttachments\":[]}",
+                            "maxAttempts": 3
+                        },
+                        "priority": 3,
+                        "name": "CarModel",
+                        "description": "Modelo del otro auto"
+                    },
+                    {
+                        "sampleUtterances": [],
+                        "slotType": "AMAZON.City",
+                        "obfuscationSetting": "NONE",
+                        "slotConstraint": "Required",
+                        "valueElicitationPrompt": {
+                            "messages": [
+                                {
+                                    "contentType": "PlainText",
+                                    "content": "¿En que ciudad sufrió el choque?"
+                                }
+                            ],
+                            "maxAttempts": 5
+                        },
+                        "priority": 1,
+                        "name": "Location",
+                        "description": "Lugar del choque"
+                    },
+                    {
+                        "sampleUtterances": [],
+                        "slotType": "AMAZON.DATE",
+                        "obfuscationSetting": "NONE",
+                        "slotConstraint": "Required",
+                        "valueElicitationPrompt": {
+                            "messages": [
+                                {
+                                    "contentType": "PlainText",
+                                    "content": "¿cuando lo chocaron?"
+                                }
+                            ],
+                            "maxAttempts": 5
+                        },
+                        "priority": 2,
+                        "name": "Date",
+                        "description": "La fecha del accidente"
+                    }
+                ],
+                "confirmationPrompt": {
+                    "messages": [
+                        {
+                            "contentType": "PlainText",
+                            "content": "Hay abogado disponible para tomar su caso de Accidente ocurrido {Date} en {Location}, quiere que lo contactemos?"
+                        }
+                    ],
+                    "maxAttempts": 2
+                }
+            },
+
+            {
+                "description": "Intención Abogado de Atropellos",
+                "rejectionStatement": {
+                    "messages": [
+                        {
+                            "contentType": "PlainText",
+                            "content": "Vale si cambia de opinión no dude en contactarnos."
+                        }
+                    ]
+                },
+                "name": "HitByCar_es",
+                "version": "4",
+                "fulfillmentActivity": {
+                    "codeHook": {
+                        "uri": "",
+                        "messageVersion": "1.0"
+                    },
+                    "type": "CodeHook"
+                },
+                "sampleUtterances": [
+                    "Me ha atropellado un {CarModel}",
+                    "Me han atropellado",
+                    "Me ha atropellado alguien conduciendo un {CarModel}",
+                    "Un {CarModel} me atropelló",
+                    "Me ha atropellado un {CarModel} en {Location}",
+                    "Un {CarModel} me atropelló en {Location}",
+                    "Me han atropellado en {Location}"
+                ],
+                "slots": [
+                    {
+                        "sampleUtterances": [
+                        ],
+                        "slotType": "carModel_es",
+                        "slotTypeVersion": "$LATEST",
+                        "obfuscationSetting": "NONE",
+                        "slotConstraint": "Required",
+                        "valueElicitationPrompt": {
+                            "messages": [
+                                {
+                                    "contentType": "PlainText",
+                                    "content": "¿Si lo recuerda, nos podría comentar qué modelo de auto lo atropelló?"
+                                }
+                            ],
+                            "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\",\"genericAttachments\":[]}",
+                            "maxAttempts": 3
+                        },
+                        "priority": 3,
+                        "name": "CarModel",
+                        "description": "Modelo del otro auto"
+                    },
+                    {
+                        "sampleUtterances": [],
+                        "slotType": "AMAZON.City",
+                        "obfuscationSetting": "NONE",
+                        "slotConstraint": "Required",
+                        "valueElicitationPrompt": {
+                            "messages": [
+                                {
+                                    "contentType": "PlainText",
+                                    "content": "¿En que ciudad sufrió el accidente?"
+                                }
+                            ],
+                            "maxAttempts": 5
+                        },
+                        "priority": 1,
+                        "name": "Location",
+                        "description": "Lugar del accidente"
+                    },
+                    {
+                        "sampleUtterances": [],
+                        "slotType": "AMAZON.DATE",
+                        "obfuscationSetting": "NONE",
+                        "slotConstraint": "Required",
+                        "valueElicitationPrompt": {
+                            "messages": [
+                                {
+                                    "contentType": "PlainText",
+                                    "content": "¿cuando lo atropellaron?"
+                                }
+                            ],
+                            "maxAttempts": 5
+                        },
+                        "priority": 2,
+                        "name": "Date",
+                        "description": "La fecha del accidente"
+                    }
+                ],
+                "confirmationPrompt": {
+                    "messages": [
+                        {
+                            "contentType": "PlainText",
+                            "content": "Hay abogado disponible para tomar su caso de Accidente ocurrido {Date} en {Location}, quiere que lo contactemos?"
+                        }
+                    ],
+                    "maxAttempts": 2
+                }
+            },
+
+            {
+                "name": "saludo_abogados",
+                "version": "1",
+                "fulfillmentActivity": {
+                    "type": "ReturnIntent"
+                },
+                "sampleUtterances": [
+                    "hola",
+                    "buenos dias",
+                    "necesito un abogado",
+                    "no se que hacer",
+                    "ayuda"
+                ],
+                "slots": [],
+                "conclusionStatement": {
+                    "messages": [
+                        {
+                            "groupNumber": 1,
+                            "contentType": "PlainText",
+                            "content": "Hola. Yo te ayudaré a encontrar un abogado Intenta diciendo 'Me han atropellado' o 'He sufrido un choque'."
+                        }
+                    ]
+                }
+            },
+
+            {
+                "name": "callme_abogados",
+                "version": "1",
+                "fulfillmentActivity": {
+                    "codeHook": {
+                        "uri": "",
+                        "messageVersion": "1.0"
+                    },
+                    "type": "CodeHook"
+                },
+                "sampleUtterances": [
+                    "necesito que me llamen",
+                    "llámenme",
+                    "que me llame un abogado",
+                    "que alguien me llame",
+                    "urgencia"
+                ],
+                "slots": [],
+                "conclusionStatement": {
+                    "messages": [
+                        {
+                            "groupNumber": 1,
+                            "contentType": "PlainText",
+                            "content": "Ok, te contactaremos con un abogado de urgencia, no cuelgues."
+                        }
+                    ]
+                }
+            }
+        ],
+        "slotTypes": [
+            {
+                "description": "Modelos de Autos",
+                "name": "carModel_es",
+                "version": "1",
+                "enumerationValues": [
+                    {"value": "audi"},
+                    {"value": "mercedes-benz"},
+                    {"value": "tesla"},
+                    {"value": "porsche"},
+                    {"value": "volvo"},
+                    {"value": "Lamborghini"},
+                    {"value": "Ferrari"},
+                    {"value": "Land Rover"},
+                    {"value": "Jaguar"},
+                    {"value": "Cadillac"},
+                    {"value": "Rolls-Royce"},
+                    {"value": "Maserati"},
+                    {"value": "Bugatti"},
+                    {"value": "chevrolet"},
+                    {"value": "lexus"},
+                    {"value": "ford"},
+                    {"value": "BMW"},
+                    {"value": "No lo sé"},
+                    {"value": "No lo recuerdo"}
+                ],
+                "valueSelectionStrategy": "ORIGINAL_VALUE"
+            }
+        ],
+        "voiceId": "0",
+        "childDirected": false,
+        "locale": "es-US",
+        "idleSessionTTLInSeconds": 600,
+        "clarificationPrompt": {
+            "messages": [
+                {
+                    "contentType": "PlainText",
+                    "content": "No lo entendí, ¿qué le gustaría que haga?"
+                }
+            ],
+            "maxAttempts": 2
+        },
+        "abortStatement": {
+            "messages": [
+                {
+                    "contentType": "PlainText",
+                    "content": "Disculpe, no puedo ayudarlo en este momento"
+                }
+            ]
+        },
+        "detectSentiment": false,
+        "enableModelImprovements": true
+    }
+}

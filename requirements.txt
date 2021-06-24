@@ -1,1 +1,6 @@
--e .
+aws-cdk.aws-lambda
+aws-cdk.aws-iam
+aws-cdk.aws-dynamodb
+cdk-dynamo-table-viewer
+aws_cdk.aws_apigateway
+boto3

@@ -1,0 +1,449 @@
+{
+    "Version": "2019-10-30",
+    "StartAction": "43786425-989f-40cf-bc6a-abe43297f2cd",
+    "Metadata": {
+        "entryPointPosition": {
+            "x": 45,
+            "y": 129
+        },
+        "snapToGrid": false,
+        "ActionMetadata": {
+            "3895ed1e-4939-4731-832a-7f8f16c4fcad": {
+                "position": {
+                    "x": 1465,
+                    "y": 99
+                },
+                "useDynamic": false
+            },
+            "1ad1a458-0933-4f32-bf44-56fbc7d130d5": {
+                "position": {
+                    "x": 2969,
+                    "y": 149
+                }
+            },
+            "43786425-989f-40cf-bc6a-abe43297f2cd": {
+                "position": {
+                    "x": 201,
+                    "y": 167
+                }
+            },
+            "5bc7743e-0a8a-478e-b1e8-444dc822eaf5": {
+                "position": {
+                    "x": 1226,
+                    "y": 394
+                },
+                "useDynamic": false
+            },
+            "3cd76775-9c08-4683-9d20-9bea0ff75033": {
+                "position": {
+                    "x": 971,
+                    "y": 394
+                },
+                "useDynamic": false
+            },
+            "95a26764-3940-450c-9918-7a2b666c0dda": {
+                "position": {
+                    "x": 2690,
+                    "y": 97
+                }
+            },
+            "15612b29-5f95-4e1a-940b-5a4005edad5d": {
+                "position": {
+                    "x": 1704,
+                    "y": 97
+                },
+                "useDynamic": false,
+                "promptName": "Beep.wav"
+            },
+            "e74b1dbe-ff92-46c7-947c-a78cb031763e": {
+                "position": {
+                    "x": 2427,
+                    "y": 96
+                },
+                "conditionMetadata": [],
+                "useDynamic": false
+            },
+            "3d5fbe06-a997-4f91-ae04-bfda790c01a4": {
+                "position": {
+                    "x": 1946,
+                    "y": 97
+                },
+                "fromCustomer": true,
+                "toCustomer": false
+            },
+            "513299ca-5e44-4141-a9ba-d9508fcea48f": {
+                "position": {
+                    "x": 2183,
+                    "y": 283
+                }
+            },
+            "062355a9-7ef1-4a58-822f-2e96caa1c7bb": {
+                "position": {
+                    "x": 920,
+                    "y": 153
+                },
+                "audio": [
+                    {
+                        "tts": "<speak>Gracias por su llamado. Por favor espere mientras lo comunico con <prosody rate=\"slow\"> $.Attributes.agentName </prosody> </speak>",
+                        "useTts": true,
+                        "ttsType": "ssml",
+                        "type": "Text"
+                    },
+                    {
+                        "tts": "<speak><break time=\"3s\"/></speak>",
+                        "useTts": true,
+                        "ttsType": "ssml",
+                        "type": "Text"
+                    }
+                ],
+                "timeoutUnit": {
+                    "display": "Seconds",
+                    "value": "sec"
+                }
+            },
+            "75df61cb-e078-4a7b-ba95-8bdfb073a5f6": {
+                "position": {
+                    "x": 731,
+                    "y": 395
+                },
+                "audio": [
+                    {
+                        "tts": ",",
+                        "useTts": true,
+                        "ttsType": "text",
+                        "type": "Text"
+                    }
+                ],
+                "timeoutUnit": {
+                    "display": "Seconds",
+                    "value": "sec"
+                }
+            },
+            "f0d6b7b9-3889-4735-b8e4-4a2a9f11dd1e": {
+                "position": {
+                    "x": 448,
+                    "y": 215
+                },
+                "conditionMetadata": [
+                    {
+                        "id": "81466708-f357-4359-80dd-880fa5a15af1",
+                        "operator": {
+                            "name": "Equals",
+                            "value": "Equals",
+                            "shortDisplay": "="
+                        },
+                        "value": "true"
+                    }
+                ]
+            },
+            "34288ca1-4222-4cd0-9dbe-2ca31cd40d78": {
+                "position": {
+                    "x": 197,
+                    "y": 368
+                },
+                "overrideConsoleVoice": true,
+                "defaultVoice": "None"
+            },
+            "56afe99c-5675-4c6e-96e4-acec5fa1853d": {
+                "position": {
+                    "x": 435,
+                    "y": 0
+                }
+            }
+        }
+    },
+    "Actions": [
+        {
+            "Identifier": "3895ed1e-4939-4731-832a-7f8f16c4fcad",
+            "Parameters": {
+                "Text": "Por favor deje un mensaje despu\u00e9s del tono. Tiene 60 segundos."
+            },
+            "Transitions": {
+                "NextAction": "15612b29-5f95-4e1a-940b-5a4005edad5d",
+                "Errors": [],
+                "Conditions": []
+            },
+            "Type": "MessageParticipant"
+        },
+        {
+            "Identifier": "1ad1a458-0933-4f32-bf44-56fbc7d130d5",
+            "Type": "DisconnectParticipant",
+            "Parameters": {},
+            "Transitions": {}
+        },
+        {
+            "Identifier": "43786425-989f-40cf-bc6a-abe43297f2cd",
+            "Parameters": {
+                "FlowLoggingBehavior": "Enabled"
+            },
+            "Transitions": {
+                "NextAction": "34288ca1-4222-4cd0-9dbe-2ca31cd40d78",
+                "Errors": [],
+                "Conditions": []
+            },
+            "Type": "UpdateFlowLoggingBehavior"
+        },
+        {
+            "Identifier": "5bc7743e-0a8a-478e-b1e8-444dc822eaf5",
+            "Parameters": {
+                "Text": "no est\u00e1 disponible en este momento."
+            },
+            "Transitions": {
+                "NextAction": "3895ed1e-4939-4731-832a-7f8f16c4fcad",
+                "Errors": [],
+                "Conditions": []
+            },
+            "Type": "MessageParticipant"
+        },
+        {
+            "Identifier": "3cd76775-9c08-4683-9d20-9bea0ff75033",
+            "Parameters": {
+                "SSML": "<speak><prosody rate=\"slow\"> $.Attributes.agentName </prosody> </speak>"
+            },
+            "Transitions": {
+                "NextAction": "5bc7743e-0a8a-478e-b1e8-444dc822eaf5",
+                "Errors": [],
+                "Conditions": []
+            },
+            "Type": "MessageParticipant"
+        },
+        {
+            "Identifier": "95a26764-3940-450c-9918-7a2b666c0dda",
+            "Parameters": {
+                "MediaStreamingState": "Disabled",
+                "MediaStreamType": "Audio",
+                "Participants": [
+                    {
+                        "ParticipantType": "Customer",
+                        "MediaDirections": [
+                            "From",
+                            "To"
+                        ]
+                    }
+                ]
+            },
+            "Transitions": {
+                "NextAction": "1ad1a458-0933-4f32-bf44-56fbc7d130d5",
+                "Errors": [
+                    {
+                        "NextAction": "1ad1a458-0933-4f32-bf44-56fbc7d130d5",
+                        "ErrorType": "NoMatchingError"
+                    }
+                ],
+                "Conditions": []
+            },
+            "Type": "UpdateContactMediaStreamingBehavior"
+        },
+        {
+            "Identifier": "15612b29-5f95-4e1a-940b-5a4005edad5d",
+            "Parameters": {
+                "PromptId": "REPLACE_PROMPT_ARN"
+            },
+            "Transitions": {
+                "NextAction": "3d5fbe06-a997-4f91-ae04-bfda790c01a4",
+                "Errors": [],
+                "Conditions": []
+            },
+            "Type": "MessageParticipant"
+        },
+        {
+            "Identifier": "e74b1dbe-ff92-46c7-947c-a78cb031763e",
+            "Parameters": {
+                "SSML": "<speak></speak>",
+                "StoreInput": "False",
+                "InputTimeLimitSeconds": "60"
+            },
+            "Transitions": {
+                "NextAction": "95a26764-3940-450c-9918-7a2b666c0dda",
+                "Errors": [
+                    {
+                        "NextAction": "95a26764-3940-450c-9918-7a2b666c0dda",
+                        "ErrorType": "NoMatchingError"
+                    },
+                    {
+                        "NextAction": "95a26764-3940-450c-9918-7a2b666c0dda",
+                        "ErrorType": "NoMatchingCondition"
+                    },
+                    {
+                        "NextAction": "95a26764-3940-450c-9918-7a2b666c0dda",
+                        "ErrorType": "InputTimeLimitExceeded"
+                    }
+                ],
+                "Conditions": []
+            },
+            "Type": "GetParticipantInput"
+        },
+        {
+            "Identifier": "3d5fbe06-a997-4f91-ae04-bfda790c01a4",
+            "Parameters": {
+                "MediaStreamingState": "Enabled",
+                "MediaStreamType": "Audio",
+                "Participants": [
+                    {
+                        "ParticipantType": "Customer",
+                        "MediaDirections": [
+                            "From"
+                        ]
+                    }
+                ]
+            },
+            "Transitions": {
+                "NextAction": "e74b1dbe-ff92-46c7-947c-a78cb031763e",
+                "Errors": [
+                    {
+                        "NextAction": "513299ca-5e44-4141-a9ba-d9508fcea48f",
+                        "ErrorType": "NoMatchingError"
+                    }
+                ],
+                "Conditions": []
+            },
+            "Type": "UpdateContactMediaStreamingBehavior"
+        },
+        {
+            "Identifier": "513299ca-5e44-4141-a9ba-d9508fcea48f",
+            "Parameters": {
+                "Attributes": {
+                    "startStreamingAudioStatus": "failure"
+                }
+            },
+            "Transitions": {
+                "NextAction": "e74b1dbe-ff92-46c7-947c-a78cb031763e",
+                "Errors": [
+                    {
+                        "NextAction": "e74b1dbe-ff92-46c7-947c-a78cb031763e",
+                        "ErrorType": "NoMatchingError"
+                    }
+                ],
+                "Conditions": []
+            },
+            "Type": "UpdateContactAttributes"
+        },
+        {
+            "Identifier": "062355a9-7ef1-4a58-822f-2e96caa1c7bb",
+            "Parameters": {
+                "InterruptFrequencySeconds": "20",
+                "Messages": [
+                    {
+                        "SSML": "<speak>Gracias por su llamado. Por favor espere mientras lo comunico con <prosody rate=\"slow\"> $.Attributes.agentName </prosody> </speak>"
+                    },
+                    {
+                        "SSML": "<speak><break time=\"3s\"/></speak>"
+                    }
+                ]
+            },
+            "Transitions": {
+                "NextAction": "3895ed1e-4939-4731-832a-7f8f16c4fcad",
+                "Errors": [
+                    {
+                        "NextAction": "3895ed1e-4939-4731-832a-7f8f16c4fcad",
+                        "ErrorType": "NoMatchingError"
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "NextAction": "3895ed1e-4939-4731-832a-7f8f16c4fcad",
+                        "Condition": {
+                            "Operator": "Equals",
+                            "Operands": [
+                                "MessagesInterrupted"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "Type": "MessageParticipantIteratively"
+        },
+        {
+            "Identifier": "75df61cb-e078-4a7b-ba95-8bdfb073a5f6",
+            "Parameters": {
+                "InterruptFrequencySeconds": "1",
+                "Messages": [
+                    {
+                        "Text": ","
+                    }
+                ]
+            },
+            "Transitions": {
+                "NextAction": "3cd76775-9c08-4683-9d20-9bea0ff75033",
+                "Errors": [
+                    {
+                        "NextAction": "3cd76775-9c08-4683-9d20-9bea0ff75033",
+                        "ErrorType": "NoMatchingError"
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "NextAction": "3cd76775-9c08-4683-9d20-9bea0ff75033",
+                        "Condition": {
+                            "Operator": "Equals",
+                            "Operands": [
+                                "MessagesInterrupted"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "Type": "MessageParticipantIteratively"
+        },
+        {
+            "Identifier": "f0d6b7b9-3889-4735-b8e4-4a2a9f11dd1e",
+            "Parameters": {
+                "ComparisonValue": "$.Attributes.available"
+            },
+            "Transitions": {
+                "NextAction": "75df61cb-e078-4a7b-ba95-8bdfb073a5f6",
+                "Errors": [
+                    {
+                        "NextAction": "75df61cb-e078-4a7b-ba95-8bdfb073a5f6",
+                        "ErrorType": "NoMatchingCondition"
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "NextAction": "062355a9-7ef1-4a58-822f-2e96caa1c7bb",
+                        "Condition": {
+                            "Operator": "Equals",
+                            "Operands": [
+                                "true"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "Type": "Compare"
+        },
+        {
+            "Identifier": "34288ca1-4222-4cd0-9dbe-2ca31cd40d78",
+            "Parameters": {
+                "TextToSpeechVoice": "Lupe",
+                "TextToSpeechEngine": "Neural",
+                "TextToSpeechStyle": "Newscaster"
+            },
+            "Transitions": {
+                "NextAction": "56afe99c-5675-4c6e-96e4-acec5fa1853d",
+                "Errors": [],
+                "Conditions": []
+            },
+            "Type": "UpdateContactTextToSpeechVoice"
+        },
+        {
+            "Identifier": "56afe99c-5675-4c6e-96e4-acec5fa1853d",
+            "Parameters": {
+                "Attributes": {
+                    "languageCode": "es-US"
+                }
+            },
+            "Transitions": {
+                "NextAction": "f0d6b7b9-3889-4735-b8e4-4a2a9f11dd1e",
+                "Errors": [
+                    {
+                        "NextAction": "f0d6b7b9-3889-4735-b8e4-4a2a9f11dd1e",
+                        "ErrorType": "NoMatchingError"
+                    }
+                ],
+                "Conditions": []
+            },
+            "Type": "UpdateContactAttributes"
+        }
+    ]
+}
